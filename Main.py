@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 from sklearn.preprocessing import Normalizer
-from keras.models import load_model
 from utils import extract_face_roi
 import pickle
 from scipy.spatial.distance import cosine
@@ -11,8 +10,8 @@ from flask import request
 from flask import Flask,jsonify
 from utils import load_image
 import tensorflow as tf
-import keras
 
+os.environ['CUDA_VISIBLE_DEVICES']='-1'
 
 
 global graph

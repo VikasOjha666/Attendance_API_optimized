@@ -7,8 +7,9 @@ import os
 from bson.binary import Binary
 import tensorflow as tf
 
+os.environ['CUDA_VISIBLE_DEVICES']='-1'
+
 Normaliser = Normalizer(norm='l2')
-from keras.models import load_model
 
 global graph
 frozen_graph="facenet_optimized.pb"
